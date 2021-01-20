@@ -1,0 +1,22 @@
+{
+  "name": "william-discord",
+  "version": "1.0.0",
+  "description": "my own discord bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rezainjus/William-Discord.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rezainjus/William-Discord/issues"
+  },
+  "homepage": "https://github.com/rezainjus/William-Discord#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1"
+  }
+}
