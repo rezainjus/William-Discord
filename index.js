@@ -50,6 +50,16 @@ async function gotMessage(msg) {
                 targetMember.kick()
                 msg.channel.send(`Sir, User ${target} Got Kicked from the Server.`)
             }
+        } else if (tokens[1] === "delete") {
+            const amount = tokens[2]
+            if (amount > 100) { msg.reply("You can't delete more than 100 messages at once.")}
+            if (amount < 1) {msg.reply("You have to delete at least 1 message!")}
+            if (!amount) {msg.reply("You haven't given an amount of messages You want to delete!")}
+            if (isNaN(amount)) {msg.reply("The amount parameter isn't a number!")}
+
+            msg.channel.bulkDelete(amount).then(() => {
+                msg.reply(`Deleted ${amount} messages.`).then(mssg => mssg.delete({timeout: 5000}))
+            })
         }
     }
 }
